@@ -1,0 +1,51 @@
+{
+  "name": "paseos",
+  "version": "1.0.0",
+  "description": "Paseo takes you on a journey.",
+  "main": "index.js",
+  "author": "Diego Wilson",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "polymer serve --port 8080",
+    "test": "npm run lint && npm run test:unit",
+    "lint": "eslint src/*",
+    "test:unit": "polymer test",
+    "test:integration": "mocha test/integration --timeout=10000",
+    "watch": "nodemon --exec \"npm test && npm start\"",
+    "screenshots": "mocha test/integration/screenshots/generate.js --timeout=15000"
+  },
+  "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-card": "^3.0.1",
+    "@polymer/paper-fab": "^3.0.1",
+    "@polymer/paper-input": "^3.0.1",
+    "@webcomponents/webcomponentsjs": "latest",
+    "idb": "^4.0.3",
+    "lit-element": "latest",
+    "macro-carousel": "^1.0.0",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.4.0",
+    "polymer-cli": "^1.9.8",
+    "polyserve": "^0.27.15",
+    "puppeteer": "^1.14.0",
+    "pwa-helpers": "^0.9.1"
+  },
+  "devDependencies": {
+    "@polymer/test-fixture": "^4.0.2",
+    "chai": "^4.1.2",
+    "eslint": "^5.15.3",
+    "eslint-config-google": "^0.12.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.10",
+    "sinon": "^7.3.1",
+    "wct-mocha": "^1.0.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      "build/*"
+    ],
+    "ext": "js,json,html"
+  }
+}

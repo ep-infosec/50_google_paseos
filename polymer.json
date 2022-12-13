@@ -1,0 +1,19 @@
+{
+  "shell": "src/paseos-app.js",
+  "entrypoint": "index.html",
+  "sources": [
+    "images/*",
+    "sw.js"
+  ],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "firebase-config.json",
+    "manifest.json"
+  ],
+  "npm": true,
+  "moduleResolution": "node",
+  "builds": [{
+    "name": "default",
+    "preset": "es6-unbundled"
+  }]
+}
